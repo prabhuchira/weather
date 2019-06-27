@@ -6,7 +6,7 @@ const log = console.log;
 const geoCode = require('./../utils/geocode');
 const getForecast = require('./../utils/forecast');
 const request = require('request')
-const port = process.env.PORT || 3000;
+
 
 
 let parials = path.join(__dirname,'./../views/partials')
@@ -52,7 +52,7 @@ app.get('/status',(req,response)=>{
     console.log(req.query.search)
 })
 
-app.listen(port,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log('Server is up and listening at 3000')
 })
 
