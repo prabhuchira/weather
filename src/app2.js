@@ -22,7 +22,7 @@ hbs.registerPartials(parials,()=>{
     console.log("partials have benn connected")
 })
 
-log(app.get('views'))
+
 
 
 app.get('',(req,res)=>{
