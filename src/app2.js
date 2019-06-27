@@ -33,24 +33,24 @@ app.get('/about',(req,res)=>{
 })
 
 
-app.get('/status',(req,response)=>{
+// app.get('/status',(req,response)=>{
     
     
-    geoCode(req.query.search,(error,res)=>{
-        console.log(res)
-        var url = 'https://api.darksky.net/forecast/919e188f634310a7acdf94702692f9fc/' + res.latitude+ ','  + res.longitude;
-        console.log(url)
-       request({url:url,headers:{'Content-Type':'application/json'},json:true},(error,res)=>{
-           response.send(res.body)
-       })
+//     geoCode(req.query.search,(error,res)=>{
+//         console.log(res)
+//         var url = 'https://api.darksky.net/forecast/919e188f634310a7acdf94702692f9fc/' + res.latitude+ ','  + res.longitude;
+//         console.log(url)
+//        request({url:url,headers:{'Content-Type':'application/json'},json:true},(error,res)=>{
+//            response.send(res.body)
+//        })
         
-    })
+//     })
     
 
 
     
-    console.log(req.query.search)
-})
+//     console.log(req.query.search)
+// })
 
 app.listen(process.env.PORT || 3000,()=>{
     console.log('Server is up and listening at 3000')
